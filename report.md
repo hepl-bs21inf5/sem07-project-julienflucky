@@ -14,7 +14,7 @@ Quiz                                    2h
 
 ### Difficultés rencontrées et solutions trouvées
 
-qweqqwe
+Changer les constantes
 
 ### Explications et réflexions sur le code
 

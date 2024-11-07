@@ -1,5 +1,5 @@
 <script setup lang="ts">
-  import QuizForm from "@/components/QuizForm.vue";
+import QuizForm from '@/components/QuizForm.vue'
 </script>
 
 <template>
