@@ -7,7 +7,7 @@ const capitale = ref<string | null>(null)
 const filled = computed<boolean>(
   () => cheval.value !== null && chat.value !== null && capitale.value !== null,
 )
-
+//Ajout du bouton reset//
 function reset() {
   cheval.value = null
   chat.value = null
@@ -15,6 +15,7 @@ function reset() {
 }
 
 function submit(event: Event): void {
+  //Calcul des points//
   let score = 0
   const score_parfait = 3
   let phrase: string = ''
@@ -38,6 +39,7 @@ function submit(event: Event): void {
   }
   event.preventDefault()
   if (filled.value) {
+    //Message d'alerte de fin//
     alert(`Vous avez choisi la couleur ${cheval.value} !
 Vous avez choisi le nombre ${chat.value} !
 Vous avez choisi la capitale ${capitale.value} !
@@ -192,5 +194,6 @@ et votre score est de ${score}/${score_parfait} ${phrase}
     </div>
     <button class="btn btn-primary" :class="{ disabled: !filled }" type="submit">Terminer</button>
   </form>
+  <!-- bouton en dehors de form pour qu'il ne soit pas lié aux questions-->
   <button class="btn btn-secondary" @click="reset">Réinitialiser</button>
 </template>

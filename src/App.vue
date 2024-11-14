@@ -6,6 +6,7 @@ import { RouterLink, RouterView } from 'vue-router'
   <nav class="navbar navbar-expand-lg bg-body-tertiary">
     <div class="container-fluid">
       <RouterLink class="navbar-brand" to="/">
+        <!-- changement d'icone de la dans la barre -->
         <i class="bi bi-1-circle-fill"></i>
         Quiz
       </RouterLink>
@@ -24,6 +25,7 @@ import { RouterLink, RouterView } from 'vue-router'
         <ul class="navbar-nav">
           <li class="nav-item">
             <RouterLink class="nav-link" to="/about">
+              <!-- changement d'icone de la dans la barre -->
               <i class="bi bi-2-circle-fill"></i>
               À propos
             </RouterLink>
