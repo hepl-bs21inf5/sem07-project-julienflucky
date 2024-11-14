@@ -8,12 +8,40 @@ const filled = computed<boolean>(
   () => cheval.value !== null && chat.value !== null && capitale.value !== null,
 )
 
+function reset() {
+  cheval.value = null
+  chat.value = null
+  capitale.value = null
+}
+
 function submit(event: Event): void {
+  let score = 0
+  const score_parfait = 3
+  let phrase: string = ''
+  if (cheval.value == 'Blanc') {
+    score += 1
+  }
+  if (chat.value == 'Quatre') {
+    score += 1
+  }
+  if (capitale.value == 'Bern') {
+    score += 1
+  }
+  if (score == score_parfait) {
+    phrase = 'Parfait ! Bravo !'
+  } else if (score == 0) {
+    phrase = 'Dommage, tu feras mieux la prochaine fois !'
+  } else if (score == 1) {
+    phrase = 'Tu peux mieux faire !'
+  } else if (score == 2) {
+    phrase = 'Bien !'
+  }
   event.preventDefault()
   if (filled.value) {
     alert(`Vous avez choisi la couleur ${cheval.value} !
 Vous avez choisi le nombre ${chat.value} !
 Vous avez choisi la capitale ${capitale.value} !
+et votre score est de ${score}/${score_parfait} ${phrase}
 `)
   }
 }
@@ -164,4 +192,5 @@ Vous avez choisi la capitale ${capitale.value} !
     </div>
     <button class="btn btn-primary" :class="{ disabled: !filled }" type="submit">Terminer</button>
   </form>
+  <button class="btn btn-secondary" @click="reset">Réinitialiser</button>
 </template>
