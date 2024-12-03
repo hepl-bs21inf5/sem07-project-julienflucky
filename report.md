@@ -77,29 +77,36 @@ Peut-être changer les questions pour des questions qui pourront nous êtres uti
 
 ## Semaine 2 (14.11-20.11)
 
-| Tâches           | Temps estimé | Temps passé |
-| ---------------- | ------------ | ----------- |
-| QuestionRadio    | 1h30         |             |
-| QuestionText     | 1h           |             |
-| QuestionCheckBox | 30min        |             |
-| API              | 1h30         |             |
-| Total            | 4h30         |             |
-
 ### temps estimé et temps passé sur le projet et tâches réalisées
 
-qweqwe
+| Tâches                  | Temps estimé | Temps passé |
+| ----------------------- | ------------ | ----------- |
+| QuestionRadio           | 1h30         | 45min       |
+| QuestionText            | 1h           | 2h          |
+| API                     | 1h30         | 15min       |
+| QuestionCheckBox(Bonus) | 30min        | -           |
+| Total                   | 4h30         | 3h          |
 
 ### Difficultés rencontrées et solutions trouvées
 
-qweqqwe
+Un peu de la peine avec le QuestionText pour savoir quoi mettre dedans exactement, mais après m'être document j'ai trouvé les solutions.
 
 ### Explications et réflexions sur le code
 
-qweqwe
+**Question 1: Quelle est la différence entre un prop et un modèle (v-model) ?**
+
+- Un prop est un mécanisme qui permet de passer unidirectionnellement des données d'un composant mère à un composant fille.
+- Un modèle permet de lier bidirectionnellement une donnée entre un composant mère et un composant fille.
+
+**Question 2: Comment rendre la propriété placeholder optionnelle ?**
+
+- Il faudrait définir une valeur par défaut dans defineProps dans QuestionText.vue.
 
 ### Suite du projet
 
-qewqweqwe
+- Toujours changé les questions pour des questions utiles, mais j'imagine que ça sera pour la fin plutôt.
+- Faire un bouton pour le QuizTrivia et une correction avec une notification mais je ne sais pas si c'est vraiment utile.
+- Faire le QuestionCheckBox Bonus.
 
 ## Semaine 3 (21.11-27.11)
 
