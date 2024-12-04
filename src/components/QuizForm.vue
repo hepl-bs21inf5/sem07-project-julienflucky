@@ -11,6 +11,9 @@ const filled = computed<boolean>(
   () => cheval.value !== null && chat.value !== null && capitale.value !== null,
 )
 const reponse = ref<string | null>(null)
+const correctAnswers = ref<boolean[]>([])
+const score = computed<number>(() => correctAnswers.value.filter((value) => value).length)
+const totalScore = computed<number>(() => correctAnswers.value.length)
 
 //Ajout du bouton reset//
 function reset() {
@@ -20,8 +23,8 @@ function reset() {
   reponse.value = null
 }
 
+//Calcul des points//
 function submit(event: Event): void {
-  //Calcul des points//
   let score = 0
   const score_parfait = 4
   let phrase: string = ''
@@ -70,9 +73,10 @@ et votre score est de ${score}/${score_parfait} ${phrase}
 
 <template>
   <form @submit="submit">
+    <!-- Question 1 -->
     <QuestionRadio
       id="cheval"
-      v-model="cheval"
+      v-model="correctAnswers[0]"
       text="De quelle couleur est le cheval blanc de Napoléon ?"
       :options="[
         { value: 'blanc', text: 'Blanc' },
@@ -80,6 +84,7 @@ et votre score est de ${score}/${score_parfait} ${phrase}
         { value: 'noir', text: 'Noir' },
         { value: 'gris', text: 'Gris' },
       ]"
+      answer="blanc"
     />
     <!--
 v-model : la valeur de la réponse.
@@ -87,9 +92,11 @@ id : un identifiant unique pour le groupe de boutons radio.
 text : le texte de la question.
 options : un tableau d'objets pour les options de réponse.
 -->
+
+    <!-- Question 2 -->
     <QuestionRadio
       id="chat"
-      v-model="chat"
+      v-model="correctAnswers[1]"
       text="Combien de pattes a un chat ?"
       :options="[
         { value: 'quatre', text: 'Quatre' },
@@ -97,10 +104,13 @@ options : un tableau d'objets pour les options de réponse.
         { value: 'cinq', text: 'Cinq' },
         { value: 'deux', text: 'deux' },
       ]"
+      answer="quatre"
     />
+
+    <!-- Question 3 -->
     <QuestionRadio
       id="capitale"
-      v-model="capitale"
+      v-model="correctAnswers[2]"
       text="Quelle est la capitale de la Suisse ?"
       :options="[
         { value: 'genève', text: 'Genève' },
@@ -108,14 +118,20 @@ options : un tableau d'objets pour les options de réponse.
         { value: 'zürich', text: 'Zürich' },
         { value: 'lausanne', text: 'Lausanne' },
       ]"
+      answer="bern"
     />
+
+    <!-- Question 4 -->
     <QuestionText
       id="chien"
-      v-model="reponse"
+      v-model="correctAnswers[3]"
       text="Combien de pattes a un chien ?"
       placeholder="Veuillez saisir un nombre"
+      answer="4"
     />
     <button class="btn btn-primary" :class="{ disabled: !filled }" type="submit">Terminer</button>
+    <div>Réponses correctes : {{ correctAnswers }}</div>
+    <div>Score : {{ score }} / {{ totalScore }}</div>
   </form>
   <!-- bouton reset en dehors de form pour qu'il ne soit pas lié aux questions-->
   <button class="btn btn-secondary" @click="reset">Réinitialiser</button>

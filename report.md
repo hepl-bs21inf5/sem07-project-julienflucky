@@ -17,9 +17,9 @@
 
 ### Difficultés rencontrées et solutions trouvées
 
-Bloquer à partir de la consigne: "Afficher le score à la fin du quiz".
+- Bloquer à partir de la consigne: "Afficher le score à la fin du quiz".
 
-Demande de l'aide à un collègue pour savoir ce qu'il fallait faire.
+- Demande de l'aide à un collègue pour savoir ce qu'il fallait faire.
 
 ### Explications et réflexions sur le code
 
@@ -85,11 +85,12 @@ Peut-être changer les questions pour des questions qui pourront nous êtres uti
 | QuestionText            | 1h           | 2h          |
 | API                     | 1h30         | 15min       |
 | QuestionCheckBox(Bonus) | 30min        | -           |
-| Total                   | 4h30         | 3h          |
+| Rapport                 | 30min        | 30min       |
+| Total                   | 5h           | 3h30        |
 
 ### Difficultés rencontrées et solutions trouvées
 
-Un peu de la peine avec le QuestionText pour savoir quoi mettre dedans exactement, mais après m'être document j'ai trouvé les solutions.
+- Un peu de la peine avec le QuestionText pour savoir quoi mettre dedans exactement, mais après m'être document j'ai trouvé les solutions.
 
 ### Explications et réflexions sur le code
 
@@ -110,24 +111,38 @@ Un peu de la peine avec le QuestionText pour savoir quoi mettre dedans exactemen
 
 ## Semaine 3 (21.11-27.11)
 
-Tâches: Temps estimé: Temps passé:
-qwe 10min 10min
-
 ### temps estimé et temps passé sur le projet et tâches réalisées
 
-qweqwe
+| Tâches  | Temps estimé | Temps passé |
+| ------- | ------------ | ----------- |
+| Réponse | 1h30         | 1h          |
+| Score   | 30min        | 30min       |
+| Rapport | 30min        | 45min       |
+| Total   | 2h30         | 2h15        |
 
 ### Difficultés rencontrées et solutions trouvées
 
-qweqqwe
+- Je ne comprenais pas pourquoi quand je cochais une case ça enlevait les celle d'avant, je ne pouvais cocher qu'une case des QuestionRadio parmis les trois. Après j'ai compris que je devais changer la valeur dans les crochets de correctAnswers.
+
+- Sur la age du site, le score augmente malgré que les réponses soient fausses. Et dans réponses correctes, ça renvoie la réponse cochée et non la réponse correcte. Je vais demander de l'aide.
+
+- Je ne trouve pas la fonction du computed.
 
 ### Explications et réflexions sur le code
 
-qweqwe
+**Question 1: À quoi sert l'option immediate: true dans le watch ? Que se passe-t-il si on l'enlève ou si on met immediate: false ?**
+
+- Immediate: true permet d'exécuter immédiatement la fonction de rappel sans attendre que la propriété observée change.
+
+- Sans immediate ou avec un immediate: false, la focntiom sera exécutée qu'en réponse à un changement de la propriété observée.
+
+**Question 2: Proposer une autre manière de calculer le score (réécrire la fonction du computed) et comparer les deux méthodes.**
+
+-
 
 ### Suite du projet
 
-qewqweqwe
+Faire en sorte que les boutons marchent.
 
 ## Semaine 4 (28.11-04.12)
 
