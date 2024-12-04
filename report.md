@@ -144,7 +144,7 @@ Peut-être changer les questions pour des questions qui pourront nous êtres uti
 
 Faire en sorte que les boutons marchent.
 
-## Semaine 4 (28.11-04.12)
+## Semaine 4 (28.11-11.12)
 
 Tâches: Temps estimé: Temps passé:
 qwe 10min 10min
@@ -165,7 +165,7 @@ qweqwe
 
 qewqweqwe
 
-## Semaine 5 (05.12-11.12)
+## Semaine 5 (12.12-18.12)
 
 Tâches: Temps estimé: Temps passé:
 qwe 10min 10min
@@ -186,28 +186,7 @@ qweqwe
 
 qewqweqwe
 
-## Semaine 6 (12.12-18.12)
-
-Tâches: Temps estimé: Temps passé:
-qwe 10min 10min
-
-### temps estimé et temps passé sur le projet et tâches réalisées
-
-qweqwe
-
-### Difficultés rencontrées et solutions trouvées
-
-qweqqwe
-
-### Explications et réflexions sur le code
-
-qweqwe
-
-### Suite du projet
-
-qewqweqwe
-
-## Semaine 7 (19.12-25.12)
+## Semaine 6 (19.12-25.12)
 
 Tâches: Temps estimé: Temps passé:
 qwe 10min 10min
