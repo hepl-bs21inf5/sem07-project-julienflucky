@@ -1,7 +1,8 @@
 <script setup lang="ts">
 import { ref, watch } from 'vue'
+import { QuestionState } from '@/utils/models'
 
-const modelValue = defineModel<boolean>()
+const modelValue = defineModel<QuestionState>()
 const props = defineProps({
   id: { type: String, required: true },
   text: { type: String, required: true },
@@ -14,10 +15,22 @@ const value = ref<string | null>(null)
 watch(
   value,
   (newValue) => {
-    modelValue.value = newValue === props.answer
+    if (newValue === null) {
+      modelValue.value = QuestionState.Empty
+    } else {
+      modelValue.value = QuestionState.Fill
+    }
   },
   { immediate: true },
 )
+
+watch(modelValue, (newModel) => {
+  if (newModel === QuestionState.Submit) {
+    modelValue.value = value.value === props.answer ? QuestionState.Correct : QuestionState.Wrong
+  } else if (newModel === QuestionState.Empty) {
+    value.value = null
+  }
+})
 </script>
 
 <template>
@@ -27,10 +40,15 @@ watch(
     </label>
     <input
       :id="props.id"
-      v-model="modelValue"
+      v-model="value"
       class="form-control"
       type="text"
       :placeholder="props.placeholder"
+      :disabled="
+        modelValue === QuestionState.Submit ||
+        modelValue === QuestionState.Correct ||
+        modelValue === QuestionState.Wrong
+      "
     />
   </div>
 </template>

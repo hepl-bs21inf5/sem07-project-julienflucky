@@ -75,6 +75,8 @@ Lorsque filled est false (c’est-à-dire si tous les champs ne sont pas remplis
 
 Peut-être changer les questions pour des questions qui pourront nous êtres utile pour nos cours.
 
+&nbsp;
+
 ## Semaine 2 (14.11-20.11)
 
 ### temps estimé et temps passé sur le projet et tâches réalisées
@@ -109,6 +111,8 @@ Peut-être changer les questions pour des questions qui pourront nous êtres uti
 - Faire un bouton pour le QuizTrivia et une correction avec une notification mais je ne sais pas si c'est vraiment utile.
 - Faire le QuestionCheckBox Bonus.
 
+&nbsp;
+
 ## Semaine 3 (21.11-27.11)
 
 ### temps estimé et temps passé sur le projet et tâches réalisées
@@ -124,9 +128,8 @@ Peut-être changer les questions pour des questions qui pourront nous êtres uti
 
 - Je ne comprenais pas pourquoi quand je cochais une case ça enlevait les celle d'avant, je ne pouvais cocher qu'une case des QuestionRadio parmis les trois. Après j'ai compris que je devais changer la valeur dans les crochets de correctAnswers.
 
-- Sur la age du site, le score augmente malgré que les réponses soient fausses. Et dans réponses correctes, ça renvoie la réponse cochée et non la réponse correcte. Je vais demander de l'aide.
-
-- Je ne trouve pas la fonction du computed.
+- Sur la page du site, le score augmente malgré que les réponses soient fausses. Et dans réponses correctes, ça renvoie la réponse cochée et non la réponse correcte. Je vais demander de l'aide.
+  Solution après avoir demandé de l'aide: changer le v-model dans QuestionRadio et QuestionText pour value.
 
 ### Explications et réflexions sur le code
 
@@ -144,14 +147,20 @@ Peut-être changer les questions pour des questions qui pourront nous êtres uti
 
 Faire en sorte que les boutons marchent.
 
-## Semaine 4 (28.11-11.12)
+&nbsp;
 
-Tâches: Temps estimé: Temps passé:
-qwe 10min 10min
+## Semaine 4 (28.11-11.12)
 
 ### temps estimé et temps passé sur le projet et tâches réalisées
 
-qweqwe
+| Tâches                  | Temps estimé | Temps passé |
+| ----------------------- | ------------ | ----------- |
+| Etats                   | 1h30         | 1h          |
+| Boutons                 | 1h           | 45min       |
+| Réponses immuables      | 30min        | 20min       |
+| Rapport                 | 30min        |             |
+| Nouvel nav barre(Bonus) | 30min        | 30min       |
+| Total                   | 3h30         |             |
 
 ### Difficultés rencontrées et solutions trouvées
 
@@ -159,11 +168,20 @@ qweqqwe
 
 ### Explications et réflexions sur le code
 
-qweqwe
+**Question 1: Comment pourrait-on réécrire la ligne suivante sans l'opérateur ternaire (avec des if et else) ?**
+
+"model.value =
+value.value === props.answer ? QuestionState.Correct : QuestionState.Wrong;"
+
+- **Question 2: Comment pourrait-on réécrire autrement la logique du watch sur value ?**
+
+-
 
 ### Suite du projet
 
 qewqweqwe
+
+&nbsp;
 
 ## Semaine 5 (12.12-18.12)
 
@@ -185,6 +203,8 @@ qweqwe
 ### Suite du projet
 
 qewqweqwe
+
+&nbsp;
 
 ## Semaine 6 (19.12-25.12)
 

@@ -29,10 +29,21 @@ import { RouterLink, RouterView } from 'vue-router'
               <i class="bi bi-2-circle-fill"></i>
               À propos
             </RouterLink>
+          </li>
+
+          <li class="nav-item">
             <RouterLink class="nav-link" to="/trivia">
               <!-- changement d'icone de la dans la barre -->
               <i class="bi bi-3-circle-fill"></i>
               Trivia
+            </RouterLink>
+          </li>
+          <li class="nav-item">
+            <RouterLink class="nav-link" to="/description">
+              <!-- changement d'icone de la dans la barre -->
+              <i class="bi bi-4-circle-fill"></i>
+              <i color="blue"></i>
+              Descriptif du module
             </RouterLink>
           </li>
         </ul>

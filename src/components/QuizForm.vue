@@ -2,72 +2,32 @@
 //Pour importer les éléments d'autres dossier ou fichier//
 import QuestionRadio from '@/components/QuestionRadio.vue'
 import QuestionText from '@/components/QuestionText.vue'
+import { QuestionState } from '@/utils/models'
 import { computed, ref } from 'vue'
 
-const cheval = ref<string | null>(null)
-const chat = ref<string | null>(null)
-const capitale = ref<string | null>(null)
-const filled = computed<boolean>(
-  () => cheval.value !== null && chat.value !== null && capitale.value !== null,
+const filled = computed<boolean>(() =>
+  questionStates.value.every((state) => state === QuestionState.Fill),
 )
-const reponse = ref<string | null>(null)
-const correctAnswers = ref<boolean[]>([])
-const score = computed<number>(() => correctAnswers.value.filter((value) => value).length)
-const totalScore = computed<number>(() => correctAnswers.value.length)
+const submitted = computed<boolean>(() =>
+  questionStates.value.every(
+    (state) => state === QuestionState.Correct || state === QuestionState.Wrong,
+  ),
+)
+const questionStates = ref<QuestionState[]>([])
+const score = computed<number>(
+  () => questionStates.value.filter((state) => state === QuestionState.Correct).length,
+)
+const totalScore = computed<number>(() => questionStates.value.length)
 
 //Ajout du bouton reset//
-function reset() {
-  cheval.value = null
-  chat.value = null
-  capitale.value = null
-  reponse.value = null
+function reset(event: Event): void {
+  event.preventDefault()
+  questionStates.value = questionStates.value.map(() => QuestionState.Empty)
 }
 
-//Calcul des points//
 function submit(event: Event): void {
-  let score = 0
-  const score_parfait = 4
-  let phrase: string = ''
-  if (cheval.value == 'blanc') {
-    score += 1
-  }
-  if (chat.value == 'quatre') {
-    score += 1
-  }
-  if (capitale.value == 'bern') {
-    score += 1
-  }
-  if (
-    reponse.value == '4' ||
-    reponse.value == 'quatre' ||
-    reponse.value == 'quatre' ||
-    reponse.value == 'quattre' ||
-    reponse.value == 'Quattre'
-  ) {
-    score += 1
-    //les deux barre || font comme un 'or' pour avoir plusieurs conditions//
-  }
-  if (score == score_parfait) {
-    phrase = 'Parfait ! Bravo !'
-  } else if (score == 0) {
-    phrase = 'Dommage, tu feras mieux la prochaine fois !'
-  } else if (score == 1) {
-    phrase = 'Tu peux mieux faire !'
-  } else if (score == 2) {
-    phrase = 'Bien !'
-  } else if (score == 3) {
-    phrase = 'Super !'
-  }
   event.preventDefault()
-  if (filled.value) {
-    //Message d'alerte de fin selon le score//
-    alert(`Vous avez choisi la couleur ${cheval.value} !
-Vous avez choisi le nombre ${chat.value} !
-Vous avez choisi la capitale ${capitale.value} !
-Vous avez choisi le nombre ${reponse.value} !
-et votre score est de ${score}/${score_parfait} ${phrase}
-`)
-  }
+  questionStates.value = questionStates.value.map(() => QuestionState.Submit)
 }
 </script>
 
@@ -76,7 +36,7 @@ et votre score est de ${score}/${score_parfait} ${phrase}
     <!-- Question 1 -->
     <QuestionRadio
       id="cheval"
-      v-model="correctAnswers[0]"
+      v-model="questionStates[0]"
       text="De quelle couleur est le cheval blanc de Napoléon ?"
       :options="[
         { value: 'blanc', text: 'Blanc' },
@@ -96,13 +56,13 @@ options : un tableau d'objets pour les options de réponse.
     <!-- Question 2 -->
     <QuestionRadio
       id="chat"
-      v-model="correctAnswers[1]"
+      v-model="questionStates[1]"
       text="Combien de pattes a un chat ?"
       :options="[
         { value: 'quatre', text: 'Quatre' },
         { value: 'trois', text: 'Trois' },
         { value: 'cinq', text: 'Cinq' },
-        { value: 'deux', text: 'deux' },
+        { value: 'deux', text: 'Deux' },
       ]"
       answer="quatre"
     />
@@ -110,7 +70,7 @@ options : un tableau d'objets pour les options de réponse.
     <!-- Question 3 -->
     <QuestionRadio
       id="capitale"
-      v-model="correctAnswers[2]"
+      v-model="questionStates[2]"
       text="Quelle est la capitale de la Suisse ?"
       :options="[
         { value: 'genève', text: 'Genève' },
@@ -124,14 +84,14 @@ options : un tableau d'objets pour les options de réponse.
     <!-- Question 4 -->
     <QuestionText
       id="chien"
-      v-model="correctAnswers[3]"
+      v-model="questionStates[3]"
       text="Combien de pattes a un chien ?"
       placeholder="Veuillez saisir un nombre"
       answer="4"
     />
-    <button class="btn btn-primary" :class="{ disabled: !filled }" type="submit">Terminer</button>
-    <div>Réponses correctes : {{ correctAnswers }}</div>
-    <div>Score : {{ score }} / {{ totalScore }}</div>
+    <div v-if="submitted">Score : {{ score }} / {{ totalScore }}</div>
+    <div>Debug états : {{ questionStates }}</div>
+    <button class="btn btn-primary" :class="{ disabled: !filled }" @click="submit">Terminer</button>
   </form>
   <!-- bouton reset en dehors de form pour qu'il ne soit pas lié aux questions-->
   <button class="btn btn-secondary" @click="reset">Réinitialiser</button>
