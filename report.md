@@ -98,8 +98,8 @@ Peut-être changer les questions pour des questions qui pourront nous êtres uti
 
 **Question 1: Quelle est la différence entre un prop et un modèle (v-model) ?**
 
-- Un prop est un mécanisme qui permet de passer unidirectionnellement des données d'un composant mère à un composant fille.
-- Un modèle permet de lier bidirectionnellement une donnée entre un composant mère et un composant fille.
+- Un prop est un mécanisme qui permet de passer unidirectionnellement des données d'un composant père à un composant fils.
+- Un modèle permet de lier bidirectionnellement une donnée entre un composant père et un composant fils.
 
 **Question 2: Comment rendre la propriété placeholder optionnelle ?**
 
@@ -136,12 +136,26 @@ Peut-être changer les questions pour des questions qui pourront nous êtres uti
 **Question 1: À quoi sert l'option immediate: true dans le watch ? Que se passe-t-il si on l'enlève ou si on met immediate: false ?**
 
 - Immediate: true permet d'exécuter immédiatement la fonction de rappel sans attendre que la propriété observée change.
+  La fonction du watch s'exécute dès l'initialisation, même sans changement initial de value.
+
+Exemple:
+watch(
+value,
+(newValue) => {
+if (newValue === null) {
+modelValue.value = QuestionState.Empty
+} else {
+modelValue.value = QuestionState.Fill
+}
+},
+{ immediate: true },
+)
 
 - Sans immediate ou avec un immediate: false, la focntiom sera exécutée qu'en réponse à un changement de la propriété observée.
 
 **Question 2: Proposer une autre manière de calculer le score (réécrire la fonction du computed) et comparer les deux méthodes.**
 
--
+- Une autre façon de calculer le score serait d'utiliser reduce (qui parcourt un tableau et accumule une valeur finale en appliquant une fonction à chaque élément) à la place de filter, en accumulant un compteur chaque fois qu'un état est QuestionState.Correct, ce qui évite de créer un tableau intermédiaire et peut être plus performant pour de grandes listes.
 
 ### Suite du projet
 
@@ -158,13 +172,13 @@ Faire en sorte que les boutons marchent.
 | Etats                   | 1h30         | 1h          |
 | Boutons                 | 1h           | 45min       |
 | Réponses immuables      | 30min        | 20min       |
-| Rapport                 | 30min        |             |
+| Rapport                 | 30min        | 45min       |
 | Nouvel nav barre(Bonus) | 30min        | 30min       |
-| Total                   | 3h30         |             |
+| Total                   | 3h30         | 3h20        |
 
 ### Difficultés rencontrées et solutions trouvées
 
-qweqqwe
+- Aucune.
 
 ### Explications et réflexions sur le code
 
@@ -173,13 +187,28 @@ qweqqwe
 "model.value =
 value.value === props.answer ? QuestionState.Correct : QuestionState.Wrong;"
 
-- **Question 2: Comment pourrait-on réécrire autrement la logique du watch sur value ?**
+- if (value.value === props.answer) {
+  model.value = QuestionState.Correct;
+  } else {
+  model.value = QuestionState.Wrong;
+  }
 
--
+**Question 2: Comment pourrait-on réécrire autrement la logique du watch sur value ?**
+
+- On pourrait réécrire la logique du watch en utilisant un opérateur ternaire pour directement assigner la valeur, ce qui simplifie et réduit le code.
+
+Par exemple:
+watch(
+value,
+(newValue) => {
+model.value = newValue === null ? QuestionState.Empty : QuestionState.Fill;
+},
+{ immediate: true },
+);
 
 ### Suite du projet
 
-qewqweqwe
+Peut-être améliorer la partie Trivia pour qu'elle marche avec des boutons et calcule de score etc.
 
 &nbsp;
 
