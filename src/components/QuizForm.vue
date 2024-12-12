@@ -35,16 +35,17 @@ function submit(event: Event): void {
   <form @submit="submit">
     <!-- Question 1 -->
     <QuestionRadio
-      id="cheval"
+      id="naruto"
       v-model="questionStates[0]"
-      text="De quelle couleur est le cheval blanc de Napoléon ?"
+      text="Qui est le père de Naruto ?"
       :options="[
-        { value: 'blanc', text: 'Blanc' },
-        { value: 'brun', text: 'Brun' },
-        { value: 'noir', text: 'Noir' },
-        { value: 'gris', text: 'Gris' },
+        { value: 'minato', text: 'Minato' },
+        { value: 'jiraya', text: 'Jiraya' },
+        { value: 'shikamaru', text: 'Shikamaru' },
+        { value: 'itachi', text: 'Itachi' },
       ]"
-      answer="blanc"
+      answer="minato"
+      answer-detail="Désolé du spoil !"
     />
     <!--
 v-model : la valeur de la réponse.
@@ -55,40 +56,44 @@ options : un tableau d'objets pour les options de réponse.
 
     <!-- Question 2 -->
     <QuestionRadio
-      id="chat"
+      id="luffy"
       v-model="questionStates[1]"
-      text="Combien de pattes a un chat ?"
+      text="Qui est le frère de Luffy ?"
       :options="[
-        { value: 'quatre', text: 'Quatre' },
-        { value: 'trois', text: 'Trois' },
-        { value: 'cinq', text: 'Cinq' },
-        { value: 'deux', text: 'Deux' },
+        { value: 'ace', text: 'Ace' },
+        { value: 'zoro', text: 'Zoro' },
+        { value: 'usopp', text: 'Usopp' },
+        { value: 'sanji', text: 'Sanji' },
       ]"
-      answer="quatre"
+      answer="ace"
+      answer-detail="Sabo est son autre frère"
     />
 
     <!-- Question 3 -->
     <QuestionRadio
-      id="capitale"
+      id="Eren"
       v-model="questionStates[2]"
-      text="Quelle est la capitale de la Suisse ?"
+      text="Qui est le demi-frère d'Eren Jager"
       :options="[
-        { value: 'genève', text: 'Genève' },
-        { value: 'bern', text: 'Bern' },
-        { value: 'zürich', text: 'Zürich' },
-        { value: 'lausanne', text: 'Lausanne' },
+        { value: 'reiner', text: 'Reiner' },
+        { value: 'armin', text: 'Armin' },
+        { value: 'sieg', text: 'Sieg' },
+        { value: 'jean', text: 'Jean' },
       ]"
-      answer="bern"
+      answer="sieg"
+      answer-detail="Ils ont le même père mais pas la même mère"
     />
 
     <!-- Question 4 -->
     <QuestionText
-      id="chien"
+      id="izuku"
       v-model="questionStates[3]"
-      text="Combien de pattes a un chien ?"
+      text="Quel âge à Midoriya Izuku au début du manga dans l'anime My Hero Academia"
       placeholder="Veuillez saisir un nombre"
-      answer="4"
+      :answers="['14', 'quatorze', 'Quatorze']"
+      answer-detail="A la fin il a 15 ans"
     />
+    <!-- Les deux-points devant answers passe l'expression JavaScript dynamique plutôt qu'une chaîne de caractères statique.-->
     <div v-if="submitted">Score : {{ score }} / {{ totalScore }}</div>
     <div>Debug états : {{ questionStates }}</div>
     <button class="btn btn-primary" :class="{ disabled: !filled }" @click="submit">Terminer</button>

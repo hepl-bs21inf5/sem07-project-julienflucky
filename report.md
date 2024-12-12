@@ -214,12 +214,16 @@ Peut-être améliorer la partie Trivia pour qu'elle marche avec des boutons et c
 
 ## Semaine 5 (12.12-18.12)
 
-Tâches: Temps estimé: Temps passé:
-qwe 10min 10min
-
 ### temps estimé et temps passé sur le projet et tâches réalisées
 
-qweqwe
+| Tâches            | Temps estimé | Temps passé |
+| ----------------- | ------------ | ----------- |
+| Réponse détaillée | 30min        | 20min       |
+| Style             | 15min        | 5min        |
+| Rapport           | 30min        |             |
+|                   |              |             |
+|                   |              |             |
+| Total             | 1h15         |             |
 
 ### Difficultés rencontrées et solutions trouvées
 
@@ -227,7 +231,23 @@ qweqqwe
 
 ### Explications et réflexions sur le code
 
-qweqwe
+**Question 1: Ajouter ce computed dans QuestionRadio.vue :**
+
+**const answerText = computed<string>(**
+**() =>**
+**props.options.find((option) => option.value === props.answer)?.text ??**
+**props.answer,**
+**);**
+
+**Remplacer {{ props.answer }} par {{ answerText }} dans le template.**
+
+**Expliquer pourquoi on a fait ce changement ainsi que le code du computed.**
+
+- L'argument de type answerDetail: string n'est pas assignable au paramètre de type et la propriété answerText n'existe pas.
+
+**Question 2: Que se passe-t-il lorsqu'on ne met pas de valeur à answer-detail ? Est-ce satisfaisant ? Si ce n'est pas le cas, proposer une amélioration.**
+
+-
 
 ### Suite du projet
 

@@ -1,6 +1,7 @@
 /* https://getbootstrap.com/docs/5.3/components/buttons/#variables */
 /* couleur du bouton terminer */
 .btn-primary {
+  margin-top: 10px;
   --bs-btn-color: #000000;
   --bs-btn-bg: #fd0d0d;
   --bs-btn-border-color: #000000;
@@ -18,6 +19,8 @@
 }
 /* couleur du bouton réinisialiser */
 .btn-secondary {
+  margin-top: 10px;
+  margin-bottom: 50px;
   --bs-btn-color: #000000;
   --bs-btn-bg: #fd0d0d;
   --bs-btn-border-color: #000000;
