@@ -18,10 +18,13 @@ const value = ref<string | null>(null)
 const answerText = computed<string>(
   () => props.options.find((option) => option.value === props.answer)?.text ?? props.answer,
 )
+//Mélange les options
+const shuffledOptions = ref<Array<{ value: string; text: string }>>([])
 
-const shuffledOptions = computed(() => {
-  return props.options.slice().sort(() => Math.random() - 0.5)
-})
+function initializeShuffledOptions(): void {
+  shuffledOptions.value = props.options.slice().sort(() => Math.random() - 0.5)
+}
+initializeShuffledOptions()
 
 //watch permet d'exécuter une fonction à chaque fois que value change//
 //Si la valeur devient null, l'état devient Empty. Sinon, l'état devient Fill.//

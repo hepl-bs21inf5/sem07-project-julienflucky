@@ -1,8 +1,8 @@
-# Séminaire 07 - Projet - Journal de bord
+# <span style="color: red;"> Séminaire 07 - Projet - Journal de bord
 
-[Julien Flückiger]
+<span style="color: grey;"> [Julien Flückiger]
 
-## Semaine 1 (07.11-13.11)
+## <span style="color: blue;"> Semaine 1 (07.11-13.11)
 
 ### temps estimé et temps passé sur le projet et tâches réalisées
 
@@ -77,7 +77,7 @@ Peut-être changer les questions pour des questions qui pourront nous êtres uti
 
 &nbsp;
 
-## Semaine 2 (14.11-20.11)
+## <span style="color: blue;"> Semaine 2 (14.11-20.11)
 
 ### temps estimé et temps passé sur le projet et tâches réalisées
 
@@ -113,7 +113,7 @@ Peut-être changer les questions pour des questions qui pourront nous êtres uti
 
 &nbsp;
 
-## Semaine 3 (21.11-27.11)
+## <span style="color: blue;"> Semaine 3 (21.11-27.11)
 
 ### temps estimé et temps passé sur le projet et tâches réalisées
 
@@ -163,7 +163,7 @@ Faire en sorte que les boutons marchent.
 
 &nbsp;
 
-## Semaine 4 (28.11-11.12)
+## <span style="color: blue;"> Semaine 4 (28.11-11.12)
 
 ### temps estimé et temps passé sur le projet et tâches réalisées
 
@@ -212,22 +212,23 @@ Peut-être améliorer la partie Trivia pour qu'elle marche avec des boutons et c
 
 &nbsp;
 
-## Semaine 5 (12.12-18.12)
+## <span style="color: blue;"> Semaine 5 (12.12-18.12)
 
 ### temps estimé et temps passé sur le projet et tâches réalisées
 
-| Tâches            | Temps estimé | Temps passé |
-| ----------------- | ------------ | ----------- |
-| Réponse détaillée | 30min        | 20min       |
-| Style             | 15min        | 5min        |
-| Rapport           | 30min        |             |
-|                   |              |             |
-|                   |              |             |
-| Total             | 1h15         |             |
+| Tâches                                        | Temps estimé | Temps passé |
+| --------------------------------------------- | ------------ | ----------- |
+| Réponse détaillée                             | 30min        | 20min       |
+| Style                                         | 15min        | 5min        |
+| Rapport                                       | 30min        | 40min       |
+| Accepter plusieurs réponses possibles dans QT | 45min        | 50min       |
+| Adapter le Trivia pour pouvoir y jouer        | 1h           | 1h          |
+| Ordre aléatoire des choix dans QR             | 30min        | 20min       |
+| Total                                         | 3h30         | 3h15        |
 
 ### Difficultés rencontrées et solutions trouvées
 
-qweqqwe
+- Aucune.
 
 ### Explications et réflexions sur le code
 
@@ -247,15 +248,16 @@ qweqqwe
 
 **Question 2: Que se passe-t-il lorsqu'on ne met pas de valeur à answer-detail ? Est-ce satisfaisant ? Si ce n'est pas le cas, proposer une amélioration.**
 
--
+- Ca laissera une chaine vide ce qui serait dommage, mais le code fonctionne toujours, ça ne crée pas d'erreurs.
 
 ### Suite du projet
 
-qewqweqwe
+Peaufiner les détails et vérifier que tout soit bien.
+Pourquoi pas rajouter des commentaires aux endroits nécéssaire.
 
 &nbsp;
 
-## Semaine 6 (19.12-25.12)
+## <span style="color: blue;"> Semaine 6 (19.12-25.12)
 
 Tâches: Temps estimé: Temps passé:
 qwe 10min 10min

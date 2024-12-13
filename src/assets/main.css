@@ -1,6 +1,7 @@
 /* https://getbootstrap.com/docs/5.3/components/buttons/#variables */
 /* couleur du bouton terminer */
 .btn-primary {
+  /* margin pour créer un espace en haut,bad,gauche,droite du bouton */
   margin-top: 10px;
   --bs-btn-color: #000000;
   --bs-btn-bg: #fd0d0d;
@@ -35,4 +36,42 @@
   --bs-btn-disabled-color: #000000;
   --bs-btn-disabled-bg: #fd0d0d;
   --bs-btn-disabled-border-color: #fd0d0d;
+}
+/* couleur du bouton terminer du Trivia */
+.btn-tertiary {
+  margin-top: 5px;
+  --bs-btn-color: #000000;
+  --bs-btn-bg: #0d6dfd;
+  --bs-btn-border-color: #000000;
+  --bs-btn-hover-color: #000000;
+  --bs-btn-hover-bg: #0d6dfd;
+  --bs-btn-hover-border-color: #000000;
+  --bs-btn-focus-shadow-rgb: 49, 132, 253;
+  --bs-btn-active-color: #000000;
+  --bs-btn-active-bg: #0d6dfd;
+  --bs-btn-active-border-color: #0d6dfd;
+  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  --bs-btn-disabled-color: #000000;
+  --bs-btn-disabled-bg: #0d6dfd;
+  --bs-btn-disabled-border-color: #0d6dfd;
+}
+
+/* couleur du bouton réinisialiser du Trivia*/
+.btn-quatrenary {
+  margin-top: 5px;
+  margin-bottom: 30px;
+  --bs-btn-color: #000000;
+  --bs-btn-bg: #0d6dfd;
+  --bs-btn-border-color: #000000;
+  --bs-btn-hover-color: #000000;
+  --bs-btn-hover-bg: #0d6dfd;
+  --bs-btn-hover-border-color: #000000;
+  --bs-btn-focus-shadow-rgb: 49, 132, 253;
+  --bs-btn-active-color: #000000;
+  --bs-btn-active-bg: #0d6dfd;
+  --bs-btn-active-border-color: #0d6dfd;
+  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  --bs-btn-disabled-color: #000000;
+  --bs-btn-disabled-bg: #0d6dfd;
+  --bs-btn-disabled-border-color: #0d6dfd;
 }

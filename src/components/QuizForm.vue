@@ -66,7 +66,7 @@ options : un tableau d'objets pour les options de réponse.
         { value: 'sanji', text: 'Sanji' },
       ]"
       answer="ace"
-      answer-detail="Sabo est son autre frère"
+      answer-detail="Il a également un autre frère qui se nomme Sabo."
     />
 
     <!-- Question 3 -->
@@ -81,7 +81,7 @@ options : un tableau d'objets pour les options de réponse.
         { value: 'jean', text: 'Jean' },
       ]"
       answer="sieg"
-      answer-detail="Ils ont le même père mais pas la même mère"
+      answer-detail="Ils ont le même père mais pas la même mère."
     />
 
     <!-- Question 4 -->
@@ -91,11 +91,10 @@ options : un tableau d'objets pour les options de réponse.
       text="Quel âge à Midoriya Izuku au début du manga dans l'anime My Hero Academia"
       placeholder="Veuillez saisir un nombre"
       :answers="['14', 'quatorze', 'Quatorze']"
-      answer-detail="A la fin il a 15 ans"
+      answer-detail="A la fin du manga il a 15 ans."
     />
     <!-- Les deux-points devant answers passe l'expression JavaScript dynamique plutôt qu'une chaîne de caractères statique.-->
     <div v-if="submitted">Score : {{ score }} / {{ totalScore }}</div>
-    <div>Debug états : {{ questionStates }}</div>
     <button class="btn btn-primary" :class="{ disabled: !filled }" @click="submit">Terminer</button>
   </form>
   <!-- bouton reset en dehors de form pour qu'il ne soit pas lié aux questions-->

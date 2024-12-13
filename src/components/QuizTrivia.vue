@@ -8,6 +8,7 @@ interface Answer {
   text: string
 }
 
+// Déclare une interface pour structurer les données d'une question
 interface Question {
   question: string
   correct_answer: string
@@ -20,10 +21,15 @@ const questionStates = ref<QuestionState[]>([])
 const score = computed<number>(
   () => questionStates.value.filter((state) => state === QuestionState.Correct).length,
 )
+// Calcule le score maximum basé sur le nombre total de questions
 const max_score = computed<number>(() => questions.value.length)
+
+// Vérifie si toutes les questions sont remplies
 const filled = computed<boolean>(() =>
   questionStates.value.every((state) => state === QuestionState.Fill),
 )
+
+// Vérifie si toutes les questions ont été soumises
 const submitted = computed<boolean>(() =>
   questionStates.value.every(
     (state) => state === QuestionState.Correct || state === QuestionState.Wrong,
@@ -44,6 +50,7 @@ function submit(event: Event): void {
   })
 }
 
+// Récupère les nouvelles questions et les initialise
 function fetchNewQuestions(): void {
   fetch('https://opentdb.com/api.php?amount=10&type=multiple')
     .then((response) => response.json())
@@ -64,6 +71,7 @@ function fetchNewQuestions(): void {
     })
 }
 
+// Mélange un tableau de manière aléatoire
 function shuffleArray<T>(array: T[]): T[] {
   return array.sort(() => Math.random() - 0.5)
 }
@@ -82,9 +90,8 @@ fetchNewQuestions()
         :options="question.shuffledAnswers"
       />
     </div>
-    <button class="btn btn-primary" :class="{ disabled: !filled }" type="submit">Terminer</button>
-    <button class="btn btn-secondary" @click="reset">Réinitialiser</button>
     <div v-if="submitted">Score: {{ score }} / {{ max_score }}</div>
-    <div>Debug états : {{ questionStates }}</div>
+    <button class="btn btn-tertiary" :class="{ disabled: !filled }" type="submit">Terminer</button>
   </form>
+  <button class="btn btn-quatrenary" @click="reset">Réinitialiser</button>
 </template>

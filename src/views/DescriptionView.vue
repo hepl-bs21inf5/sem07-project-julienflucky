@@ -81,9 +81,7 @@
     <h4>Horaire</h4>
     <p>
       - Jeudi 09:45 - 11:15<br />
-      - Jeudi 10:15 - 11:45<br />
       - Jeudi 11:20 - 12:50<br />
-      - Vendredi 08:15 - 09:45
     </p>
 
     <h4>Organisation du module</h4>
