@@ -295,12 +295,26 @@ Pourquoi pas rajouter des commentaires aux endroits nécéssaire.
 
 ### Difficultés rencontrées et solutions trouvées
 
-- Aucune.
+- En rechargeant la page du site dans un autre endroit que Quiz cela affiche erreur 404. C'est normal pour notre site.
 
 ### Explications et réflexions sur le code
 
-qweqwe
+- Pourquoi avez-vous choisi ces améliorations ?
+
+J'ai choisi les améliorations
+_Accepter plusieurs réponses possibles pour QuestionText.vue (par exemple, "2" ou "deux")._
+_Adapter le Trivia pour pouvoir y jouer._
+_Ordre aléatoire des choix dans QuestionRadio.vue._
+car c'est celles que je trouvais le plus interessant surtout l'adaptation Trivia qui offre une multitude de questions. C'est peut-être juste dommage que les questions soient en anglais pour les gens qui ont de la peine avec la langue.
+
+- Comment les avez-vous implémentées ?
+
+- Quels problèmes avez-vous rencontrés ?
+
+Lors de la création des choix aléatoire dans QuestonRadio, au début lorsque je cliquais sur une réponse, les réponses se mélangeaient. J'ai pu donc corrigé ce problème.
+
+- Quelles améliorations pourriez-vous encore apporter ?
 
 ### Suite du projet
 
-qewqweqwe
+Faire les améliorations restante.
