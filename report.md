@@ -287,7 +287,7 @@ Pourquoi pas rajouter des commentaires aux endroits nécéssaire.
 | Tâches                            | Temps estimé | Temps passé |
 | --------------------------------- | ------------ | ----------- |
 | Corréctions du Feedback           | 45min        | 1h          |
-| Déploiement                       | 5min         |             |
+| Déploiement                       | 5min         | 5min        |
 | Améliorations (fait en semaine 5) | 0min         | 0min        |
 | Rapport                           | 45min        |             |
 | Nettoyage et vérification         | 15min        |             |
@@ -295,7 +295,7 @@ Pourquoi pas rajouter des commentaires aux endroits nécéssaire.
 
 ### Difficultés rencontrées et solutions trouvées
 
-qweqqwe
+- Aucune.
 
 ### Explications et réflexions sur le code
 
