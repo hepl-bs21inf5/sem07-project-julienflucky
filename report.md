@@ -1,8 +1,8 @@
-# <span style="color: red;"> Séminaire 07 - Projet - Journal de bord
+# <span style="color: red">Séminaire 07 - Projet - Journal de bord</span>
 
-<span style="color: grey;"> [Julien Flückiger]
+<span style="color: grey">[Julien Flückiger]</span>
 
-## <span style="color: blue;"> Semaine 1 (07.11-13.11)
+## <span style="color: blue">Semaine 1 (07.11-13.11)</span>
 
 ### temps estimé et temps passé sur le projet et tâches réalisées
 
@@ -77,7 +77,7 @@ Peut-être changer les questions pour des questions qui pourront nous êtres uti
 
 &nbsp;
 
-## <span style="color: blue;"> Semaine 2 (14.11-20.11)
+## <span style="color: blue">Semaine 2 (14.11-20.11)</span>
 
 ### temps estimé et temps passé sur le projet et tâches réalisées
 
@@ -113,7 +113,7 @@ Peut-être changer les questions pour des questions qui pourront nous êtres uti
 
 &nbsp;
 
-## <span style="color: blue;"> Semaine 3 (21.11-27.11)
+## <span style="color: blue">Semaine 3 (21.11-27.11)</span>
 
 ### temps estimé et temps passé sur le projet et tâches réalisées
 
@@ -139,6 +139,8 @@ Peut-être changer les questions pour des questions qui pourront nous êtres uti
   La fonction du watch s'exécute dès l'initialisation, même sans changement initial de value.
 
 Exemple:
+
+```
 watch(
 value,
 (newValue) => {
@@ -150,12 +152,24 @@ modelValue.value = QuestionState.Fill
 },
 { immediate: true },
 )
+```
 
 - Sans immediate ou avec un immediate: false, la focntiom sera exécutée qu'en réponse à un changement de la propriété observée.
 
 **Question 2: Proposer une autre manière de calculer le score (réécrire la fonction du computed) et comparer les deux méthodes.**
 
-- Une autre façon de calculer le score serait d'utiliser reduce (qui parcourt un tableau et accumule une valeur finale en appliquant une fonction à chaque élément) à la place de filter, en accumulant un compteur chaque fois qu'un état est QuestionState.Correct, ce qui évite de créer un tableau intermédiaire et peut être plus performant pour de grandes listes.
+- Une autre manière de calculer le score serait d'utiliser reduce, qui parcourt directement le tableau et accumule une valeur finale en appliquant une fonction à chaque élément. Par exemple, au lieu de filtrer les bonnes réponses avec filter pour créer un tableau intermédiaire, on pourrait simplement incrémenter un compteur chaque fois qu'une réponse est correcte (QuestionState.Correct). Cette méthode peut être plus performante, surtout avec de grandes listes, car elle évite la création d'un tableau supplémentaire.
+
+Exemple:
+
+```
+const score = computed<number>(() =>
+  correctAnswers.value.reduce((acc, value) => value === QuestionState.Correct ? acc + 1 : acc, 0)
+);
+```
+
+Dans cet exemple, reduce parcourt chaque élément de correctAnswers, et à chaque fois que l'élément correspond à
+QuestionState.Correct, il incrémente le compteur (acc). Ca permet d'obtenir directement le score sans avoir à créer de tableau intermédiaire.
 
 ### Suite du projet
 
@@ -163,7 +177,7 @@ Faire en sorte que les boutons marchent.
 
 &nbsp;
 
-## <span style="color: blue;"> Semaine 4 (28.11-11.12)
+## <span style="color: blue">Semaine 4 (28.11-11.12)</span>
 
 ### temps estimé et temps passé sur le projet et tâches réalisées
 
@@ -184,20 +198,26 @@ Faire en sorte que les boutons marchent.
 
 **Question 1: Comment pourrait-on réécrire la ligne suivante sans l'opérateur ternaire (avec des if et else) ?**
 
-"model.value =
+```
+model.value =
 value.value === props.answer ? QuestionState.Correct : QuestionState.Wrong;"
+```
 
-- if (value.value === props.answer) {
+```
+if (value.value === props.answer) {
   model.value = QuestionState.Correct;
   } else {
   model.value = QuestionState.Wrong;
   }
+```
 
 **Question 2: Comment pourrait-on réécrire autrement la logique du watch sur value ?**
 
 - On pourrait réécrire la logique du watch en utilisant un opérateur ternaire pour directement assigner la valeur, ce qui simplifie et réduit le code.
 
 Par exemple:
+
+```
 watch(
 value,
 (newValue) => {
@@ -205,6 +225,7 @@ model.value = newValue === null ? QuestionState.Empty : QuestionState.Fill;
 },
 { immediate: true },
 );
+```
 
 ### Suite du projet
 
@@ -212,7 +233,7 @@ Peut-être améliorer la partie Trivia pour qu'elle marche avec des boutons et c
 
 &nbsp;
 
-## <span style="color: blue;"> Semaine 5 (12.12-18.12)
+## <span style="color: blue">Semaine 5 (12.12-18.12)</span>
 
 ### temps estimé et temps passé sur le projet et tâches réalisées
 
@@ -234,11 +255,13 @@ Peut-être améliorer la partie Trivia pour qu'elle marche avec des boutons et c
 
 **Question 1: Ajouter ce computed dans QuestionRadio.vue :**
 
-**const answerText = computed<string>(**
-**() =>**
-**props.options.find((option) => option.value === props.answer)?.text ??**
-**props.answer,**
-**);**
+```
+const answerText = computed<string>(
+() =>
+props.options.find((option) => option.value === props.answer)?.text ??
+props.answer,
+);
+```
 
 **Remplacer {{ props.answer }} par {{ answerText }} dans le template.**
 
@@ -257,14 +280,18 @@ Pourquoi pas rajouter des commentaires aux endroits nécéssaire.
 
 &nbsp;
 
-## <span style="color: blue;"> Semaine 6 (19.12-25.12)
-
-Tâches: Temps estimé: Temps passé:
-qwe 10min 10min
+## <span style="color: blue">Semaine 6 (19.12-25.12)</span>
 
 ### temps estimé et temps passé sur le projet et tâches réalisées
 
-qweqwe
+| Tâches                            | Temps estimé | Temps passé |
+| --------------------------------- | ------------ | ----------- |
+| Corréctions du Feedback           | 45min        | 1h          |
+| Déploiement                       | 5min         |             |
+| Améliorations (fait en semaine 5) | 0min         | 0min        |
+| Rapport                           | 45min        |             |
+| Nettoyage et vérification         | 15min        |             |
+| Total                             | 3h30         | 3h15        |
 
 ### Difficultés rencontrées et solutions trouvées
 

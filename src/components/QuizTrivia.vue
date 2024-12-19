@@ -50,7 +50,7 @@ function submit(event: Event): void {
   })
 }
 
-// Récupère les nouvelles questions et les initialise
+// Récupère 10 nouvelles questions depuis l'API et les prépare avec des réponses mélangées pour le quiz.
 function fetchNewQuestions(): void {
   fetch('https://opentdb.com/api.php?amount=10&type=multiple')
     .then((response) => response.json())
@@ -67,11 +67,14 @@ function fetchNewQuestions(): void {
         return { ...question, shuffledAnswers }
       })
 
+      // Crée un nouvel objet question avec les réponses mélangées tout en conservant les autres propriétés de la question.
+
       questionStates.value = new Array(questions.value.length).fill(QuestionState.Empty)
     })
 }
+// Mélange un tableau de manière aléatoire en utilisant 0.5 car c'est le point médian entre 0 et 1,
+// ce qui donne autant de chances d'obtenir une valeur positive ou négative pour un mélange équilibré.
 
-// Mélange un tableau de manière aléatoire
 function shuffleArray<T>(array: T[]): T[] {
   return array.sort(() => Math.random() - 0.5)
 }

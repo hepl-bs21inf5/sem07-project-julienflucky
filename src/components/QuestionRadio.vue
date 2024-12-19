@@ -14,17 +14,21 @@ const props = defineProps({
   },
 })
 
+// Calcule le texte de la réponse sélectionnée en le cherchant dans les options ou en utilisant directement la valeur de la réponse.
+
 const value = ref<string | null>(null)
 const answerText = computed<string>(
   () => props.options.find((option) => option.value === props.answer)?.text ?? props.answer,
 )
-//Mélange les options
+// Initialise les options en les mélangeant aléatoirement pour l'affichage.
+
 const shuffledOptions = ref<Array<{ value: string; text: string }>>([])
 
 function initializeShuffledOptions(): void {
   shuffledOptions.value = props.options.slice().sort(() => Math.random() - 0.5)
 }
 initializeShuffledOptions()
+// On utilise 0.5 car c'est le point médian entre 0 et 1, ce qui donne autant de chances d'obtenir une valeur positive ou négative pour un mélange équilibré.
 
 //watch permet d'exécuter une fonction à chaque fois que value change//
 //Si la valeur devient null, l'état devient Empty. Sinon, l'état devient Fill.//

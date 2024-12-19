@@ -7,95 +7,106 @@
       PostgreSQL.
     </p>
     <h4>Compétences travaillées</h4>
-    <p>
-      - Compétence clé n°1 : Agir en tant que professionnel·le critique et porteur·porteuse de
-      connaissances et de culture
-      <br />
-      - Compétence clé n°8 : Intégrer les dimensions de la culture numérique dans sa pratique
-      professionnelle de l'enseignement
-      <br />
-      - Compétence clé n°2 : S'engager dans une démarche individuelle et collective de développement
-      professionnel <br />
-    </p>
+    <ul>
+      <li>
+        Compétence clé n°1 : Agir en tant que professionnel·le critique et porteur·porteuse de
+        connaissances et de culture
+      </li>
+      <li>
+        Compétence clé n°8 : Intégrer les dimensions de la culture numérique dans sa pratique
+        professionnelle de l'enseignement
+      </li>
+      <li>
+        Compétence clé n°2 : S'engager dans une démarche individuelle et collective de développement
+        professionnel
+      </li>
+    </ul>
 
     <h4>Prérequis</h4>
-    <p>
-      - Maîtrise des bases de la programmation (variables, types, opérateurs, expression,
-      conditions, boucles, fonctions, etc.) <br />
-      - Aisance avec l'environnement de développement (éditeur de texte, terminal, navigateur, etc.)
-      <br />
-    </p>
+    <ul>
+      <li>
+        Maîtrise des bases de la programmation (variables, types, opérateurs, expressions,
+        conditions, boucles, fonctions, etc.)
+      </li>
+      <li>
+        Aisance avec l'environnement de développement (éditeur de texte, terminal, navigateur, etc.)
+      </li>
+    </ul>
 
     <h4>Thèmes et activités-clés</h4>
-    <p>
-      - Introduction aux outils de développement de projets<br />
-      - Introduction à la programmation Web statique et dynamique<br />
-      - Création d'un site Web statique généré<br />
-      - Déploiement d'un site Web sur un serveur<br />
-      - Introduction aux bases de données<br />
-      - Introduction à l'architecture trois tiers
-    </p>
+    <ul>
+      <li>Introduction aux outils de développement de projets</li>
+      <li>Introduction à la programmation Web statique et dynamique</li>
+      <li>Création d'un site Web statique généré</li>
+      <li>Déploiement d'un site Web sur un serveur</li>
+      <li>Introduction aux bases de données</li>
+      <li>Introduction à l'architecture trois tiers</li>
+    </ul>
 
     <h4>Modalités de travail</h4>
-    <p>
-      - Cours théoriques<br />
-      - Séminaires pratiques<br />
-      - Travaux à rendre<br />
-      - Projet individuel
-    </p>
+    <ul>
+      <li>Cours théoriques</li>
+      <li>Séminaires pratiques</li>
+      <li>Travaux à rendre</li>
+      <li>Projet individuel</li>
+    </ul>
 
     <h4>Niveaux de maîtrise évalués</h4>
-    <p>
-      - Réaliser un site Web statique avec HTML et CSS<br />
-      - Réaliser un site Web dynamique avec JavaScript<br />
-      - Utiliser un générateur de site statique utilisant du Markdown<br />
-      - Déployer un site Web sur un serveur<br />
-      - Créer des tables dans une base de données<br />
-      - Réaliser des requêtes SQL simples<br />
-      - Comprendre l'architecture trois tiers
-    </p>
+    <ul>
+      <li>Réaliser un site Web statique avec HTML et CSS</li>
+      <li>Réaliser un site Web dynamique avec JavaScript</li>
+      <li>Utiliser un générateur de site statique utilisant du Markdown</li>
+      <li>Déployer un site Web sur un serveur</li>
+      <li>Créer des tables dans une base de données</li>
+      <li>Réaliser des requêtes SQL simples</li>
+      <li>Comprendre l'architecture trois tiers</li>
+    </ul>
 
     <h4>Évaluation formative</h4>
-    <p>- Rétroaction sur les travaux rendus et suivi durant les séminaires</p>
+    <ul>
+      <li>Rétroaction sur les travaux rendus et suivi durant les séminaires</li>
+    </ul>
 
     <h4>Évaluation certificative (pour la session de janvier 2025)</h4>
-    <p>
-      - Examen écrit sur table<br />
-      - Dossier individuel
-    </p>
+    <ul>
+      <li>Examen écrit sur table</li>
+      <li>Dossier individuel</li>
+    </ul>
 
     <h4>Ouvrages de base</h4>
-    <p>
-      - Apprendre le développement web - MDN<br />
-      - Créez votre site web avec HTML5 et CSS3 - OpenClassrooms<br />
-      - Apprenez à programmer avec JavaScript - OpenClassrooms<br />
-      - Requêtez une base de données avec SQL - OpenClassrooms
-    </p>
+    <ul>
+      <li>Apprendre le développement web - MDN</li>
+      <li>Créez votre site web avec HTML5 et CSS3 - OpenClassrooms</li>
+      <li>Apprenez à programmer avec JavaScript - OpenClassrooms</li>
+      <li>Requêtez une base de données avec SQL - OpenClassrooms</li>
+    </ul>
 
     <h4>Formations concernées</h4>
-    <p>- Bachelor of arts ou Bachelor of science en enseignement pour le degré secondaire 1</p>
+    <ul>
+      <li>Bachelor of arts ou Bachelor of science en enseignement pour le degré secondaire 1</li>
+    </ul>
 
     <h4>Semestre</h4>
-    <p>- Automne</p>
+    <ul>
+      <li>Automne</li>
+    </ul>
 
     <h4>Horaire</h4>
-    <p>
-      - Jeudi 09:45 - 11:15<br />
-      - Jeudi 11:20 - 12:50<br />
-    </p>
+    <ul>
+      <li>Jeudi 09:45 - 11:15</li>
+      <li>Jeudi 11:20 - 12:50</li>
+    </ul>
 
     <h4>Organisation du module</h4>
-    <p>
-      - BS21INF5-1 Programmation Web et bases de données - cours 2.5 ECTS Cours<br />
-      - BS21INF5-2 Programmation Web et bases de données - séminaire 2.5 ECTS Séminaire
-    </p>
+    <ul>
+      <li>BS21INF5-1 Programmation Web et bases de données - cours 2.5 ECTS Cours</li>
+      <li>BS21INF5-2 Programmation Web et bases de données - séminaire 2.5 ECTS Séminaire</li>
+    </ul>
 
     <h4>Responsable du module</h4>
-    <p>
-      - Tang David<br />
-      - <a href="mailto:david.tang@hepl.ch">david.tang@hepl.ch</a><br />
-      - Wang Patrick, UER MI<br />
-      - <a href="mailto:patrick.wang@hepl.ch">patrick.wang@hepl.ch</a>
-    </p>
+    <ul>
+      <li>Tang David - <a href="mailto:david.tang@hepl.ch">david.tang@hepl.ch</a></li>
+      <li>Wang Patrick, UER MI - <a href="mailto:patrick.wang@hepl.ch">patrick.wang@hepl.ch</a></li>
+    </ul>
   </div>
 </template>
