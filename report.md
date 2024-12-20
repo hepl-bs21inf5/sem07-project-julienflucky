@@ -305,16 +305,24 @@ J'ai choisi les améliorations
 _Accepter plusieurs réponses possibles pour QuestionText.vue (par exemple, "2" ou "deux")._
 _Adapter le Trivia pour pouvoir y jouer._
 _Ordre aléatoire des choix dans QuestionRadio.vue._
-car c'est celles que je trouvais le plus interessant surtout l'adaptation Trivia qui offre une multitude de questions. C'est peut-être juste dommage que les questions soient en anglais pour les gens qui ont de la peine avec la langue.
+car c'est celles que je trouvais le plus intéressantes surtout l'adaptation Trivia qui offre une multitude de questions. C'est peut-être juste dommage que les questions soient en anglais pour les gens qui ont de la peine avec la langue.
 
 - Comment les avez-vous implémentées ?
 
+Pour le QuizTrivia j'ai pris des éléments de QuizForm et j'ai demandé de l'aide ChatGPT car je bloquais pour l'ordre aléatoire des choix dans le QuestionRadio et QuizTrivia. Et pour les plusieurs réponses possible, j'ai dû changer le code pour props.answers qui accepte plusieurs réponses et un toLowerCase qui met toutes les lettres en miniscules.
+
 - Quels problèmes avez-vous rencontrés ?
 
-Lors de la création des choix aléatoire dans QuestonRadio, au début lorsque je cliquais sur une réponse, les réponses se mélangeaient. J'ai pu donc corrigé ce problème.
+Lors de la création des choix aléatoire dans QuestonRadio, au début lorsque je cliquais sur une réponse, les réponses se mélangeaient. J'ai pu donc corrigé ce problème. J'étais aussi bloqué à un moment pour rendre l'ordre des réponses aléatoire et j'ai demandé à ChatGPT pour qu'il me débloque là-dessus.
 
 - Quelles améliorations pourriez-vous encore apporter ?
 
+Les trois autres amélorations dans la listes:
+_QuestionCheckbox.vue : Sélectionner plusieurs réponses._
+_QuestionSelect.vue : Sélectionner une réponse dans une liste déroulante._
+_Ordre aléatoire des questions._
+Et pourquoi pas faire un spoiler alerte pour certaines de mes questions.
+
 ### Suite du projet
 
-Faire les améliorations restante.
+Faire les améliorations restante. et le bouton spoiler alerte.

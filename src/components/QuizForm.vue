@@ -90,7 +90,7 @@ options : un tableau d'objets pour les options de réponse.
       v-model="questionStates[3]"
       text="Quel âge à Midoriya Izuku au début du manga dans l'anime My Hero Academia"
       placeholder="Veuillez saisir un nombre"
-      :answers="['14', 'quatorze', 'Quatorze']"
+      :answers="['14', 'quatorze']"
       answer-detail="A la fin du manga il a 15 ans."
     />
     <!-- Les deux-points devant answers passe l'expression JavaScript dynamique plutôt qu'une chaîne de caractères statique.-->
