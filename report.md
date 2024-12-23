@@ -289,9 +289,10 @@ Pourquoi pas rajouter des commentaires aux endroits nécéssaire.
 | Corréctions du Feedback           | 45min        | 1h          |
 | Déploiement                       | 5min         | 5min        |
 | Améliorations (fait en semaine 5) | 0min         | 0min        |
-| Rapport                           | 45min        |             |
-| Nettoyage et vérification         | 15min        |             |
-| Total                             | 3h30         | 3h15        |
+| Rapport                           | 45min        | 1h          |
+| Nettoyage et vérification         | 15min        | 15min       |
+| Boostrap application résponsive   | 45min        | 45min       |
+| Total                             | 2h35         | 3h05        |
 
 ### Difficultés rencontrées et solutions trouvées
 
@@ -325,4 +326,4 @@ Et pourquoi pas faire un spoiler alerte pour certaines de mes questions.
 
 ### Suite du projet
 
-Faire les améliorations restante. et le bouton spoiler alerte.
+Faire les améliorations restante. Et le bouton spoiler alerte.
